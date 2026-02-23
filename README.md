@@ -12,7 +12,7 @@ This approach is ideal for projects involving **hundreds to thousands of samples
   <img src="docs/pipeline_timeline.png" width="700">
 </p>
 
-The interval-based parallelization strategy reduces total joint calling runtime from ~25 days to ~1.5 days on our HPC system.
+The interval-based parallelization strategy reduces total joint calling runtime from ~25 days of `250 samples to ~1.5 days on our HPC system.
 
 # Key Features
 
