@@ -1,0 +1,9 @@
+reference: /path/to/reference.fasta
+gvcf_dir: /path/to/gvcfs
+output_dir: /path/to/output
+sample_list: /path/to/sample_list.txt
+
+resources:
+  dbimport_memory: 110G
+  genotype_memory: 32G
+  cpus: 26e

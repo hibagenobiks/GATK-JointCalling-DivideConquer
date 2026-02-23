@@ -1,0 +1,18 @@
+# Genomics files
+*.vcf
+*.vcf.gz
+*.g.vcf.gz
+*.tbi
+*.idx
+
+# Databases
+*_Database/
+split_gvcfs/
+temp_dir/
+
+# SLURM logs
+*.out
+*.err
+
+# macOS
+.DS_Store
