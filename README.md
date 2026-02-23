@@ -1,6 +1,6 @@
 # Overview
 This workflow implements an **accelerated joint genotyping pipeline** using `GATK`, built around a **divide and conquer strategy** for efficient large-scale variant calling.  
-It intelligently partitions the genomic space into manageable regions, enabling **massively parallel processing** on HPC clusters with `SLURM` and GNU `parallel`.
+It partitions the genome into manageable interval regions, enabling **massively parallel processing** on HPC clusters with `SLURM` and GNU `parallel`.
 
 By splitting GVCFs according to genomic intervals and running `GenomicsDBImport` and `GenotypeGVCFs` steps in parallel, the pipeline **significantly speeds up** the standard GATK joint genotyping process — without compromising accuracy.
 
