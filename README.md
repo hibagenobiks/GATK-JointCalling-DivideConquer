@@ -73,13 +73,6 @@ project/
 ├── reference.fasta.fai  
 └── sample_names.txt
 
-  
-The pipeline will create:  
-
-intervals/  
-split_gvcfs/
-
-  
 ---  
   
 ## Pipeline Steps  
