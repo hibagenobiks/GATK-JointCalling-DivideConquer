@@ -189,7 +189,7 @@ Approximate benchmark for ~200 WGS samples:
 | Method                         | Runtime    |
 | ------------------------------ | ---------- |
 | Standard WGS JC                | 25–27 days |
-| Interval-parallelized approach | 3–4 days   |
+| Interval-parallelized approach | 1.5-2 days   |
   
 Performance depends on:  
   
