@@ -4,7 +4,7 @@
 #SBATCH --job-name=GATK_DBImport_Manager
 #SBATCH --output=pipeline_manager.%J.out
 #SBATCH --error=pipeline_manager.%J.err
-#SBATCH --partition=cbr_q_large   # Use a suitable partition for this lightweight manager job
+#SBATCH --partition= --   # Use a suitable partition for this lightweight manager job
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=4G
@@ -21,14 +21,14 @@ MAX_CONCURRENT_JOBS=28
 SLEEP_INTERVAL=120
 USERNAME=$(whoami)
 # MODIFIED: Array of partitions to cycle through for worker jobs
-PARTITIONS=("cbr_q_large" "cbr_q_huge")
+PARTITIONS=("cbr_q_large" "cbr_q_huge") - Use available partitions in your HPC
 
 # --- Data & Sanity Checks ---
-MAIN_GVCF_DIR="/gpfs/data/user/shweta_lab/data/ATPARK/data/vcfs/gvcfs/split_gvcfs"
-EXPECTED_GVCF_COUNT=96
+MAIN_GVCF_DIR="/path/to/split_gvcfs"
+EXPECTED_GVCF_COUNT= Total number of per sample gvcfs
 
 # --- Path to Source Interval Files ---
-INTERVALS_SOURCE_DIR="/gpfs/data/user/shweta_lab/data/SKAN/analyses/Scripts/Joint_callng/parralel_JC/intervals"
+INTERVALS_SOURCE_DIR="/path/to/intervals"
 
 # --- Module Loading ---
 echo "--- Loading required modules ---"
@@ -165,6 +165,3 @@ EOF
     fi
     echo "---------------------------------------------------------------------"
 done
-
-echo -e "\n### Pipeline Manager has finished submitting all valid jobs. ###"
-echo "### Monitor your queue with: squeue -u $USERNAME ###"
