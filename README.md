@@ -6,6 +6,14 @@ By splitting GVCFs according to genomic intervals and running `GenomicsDBImport`
 
 This approach is ideal for projects involving **hundreds to thousands of samples**, optimizing resource utilization (CPU cores, memory) and reducing wall-clock time substantially.
 
+## Runtime Comparison
+
+<p align="center">
+  <img src="docs/pipeline_timeline.png" width="700">
+</p>
+
+The interval-based parallelization strategy reduces total joint calling runtime from ~25 days to ~1.5 days on our HPC system.
+
 # Key Features
 
 - **Divide and Conquer Partitioning**:  
