@@ -51,7 +51,7 @@ while read -r chr size _; do
   fi
 done < "$FAI"
 
-echo "✅ All intervals created in $OUTDIR/"
+echo "All intervals created in $OUTDIR/"
 (base) [1086][hiba@cbrhpc1:/gpfs/data/user/shweta_lab/data/SKAN/analyses/Scripts/Joint_callng/parralel_JC]$ cat creatingdirectory.sh 
 #!/bin/bash
 
@@ -70,7 +70,7 @@ mkdir -p "$OUTPUT_DIR"
 for interval_file in "$INTERVALS_DIR"/*.interval_list; do
     interval_name=$(basename "$interval_file" .interval_list)
     mkdir -p "$OUTPUT_DIR/$interval_name"
-    echo "✅ Created: $OUTPUT_DIR/$interval_name"
+    echo "Created: $OUTPUT_DIR/$interval_name"
 done
 
-echo "🎉 All region directories created."
+echo "All region directories created."
